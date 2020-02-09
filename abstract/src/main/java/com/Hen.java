@@ -1,12 +1,14 @@
 package com;
 
-public class Hen {
-  public double getPrice() {
-    return 3;
+public class Hen extends Chicken {
+
+  public Hen(double price) {
+    this.price = price;
   }
 
-  public String getType() {
-    return getClass().getSimpleName();
+  @Override
+  public void calculateNum() {
+    System.out.format("100元可以买%s %d只\n", this.getType(), (int) (100 / this.getPrice()));
   }
 
 
