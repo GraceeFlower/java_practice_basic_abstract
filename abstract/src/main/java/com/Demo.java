@@ -11,5 +11,4 @@ public class Demo {
     hen.calculateNum();
     childChicken.calculateNum();
   }
-
 }

@@ -2,16 +2,13 @@ package com;
 
 public abstract class Chicken {
 
-    double price;
-    String type;
-
-    public double getPrice() {
-        return price;
-    }
+    public abstract double getPrice();
 
     public String getType() {
         return getClass().getSimpleName();
     }
 
-    public abstract void calculateNum();
+    public void calculateNum() {
+        System.out.format("100元可以买%s %d只\n", this.getType(), (int)(100 / this.getPrice()));
+    }
 }
